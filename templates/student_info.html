@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Student Info</h1>
+
+
+<h3>First Name: {{ user.first_name }}</h3>
+<h3>Last Name: {{ user.last_name }}</h3>
+<h3>Phone: {{ user.phone }} </h3>
+<h3>Email: {{ user.email }}</h3>
+
+    <a href="{% url 'student_update' user.id %}" class="btn btn-primary">Update</a>
+    <a href="{% url 'student_delete' user.id %}" class="btn btn-primary">Delete</a>
+{% endblock %}
